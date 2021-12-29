@@ -13,17 +13,26 @@ body {
 }
 
 .photo {
+    position: absolute;
+    z-index: 1;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 600px;
     height: 600px;
     border-radius: 15px;
+    transition: all 400ms ease-in-out;
+}
+
+.photo:hover {
+    z-index: 2;
+    transform: scale(1.5);
 }
 
 .photo-skills {
+    position: relative;
     margin-top: 50px;
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .skills-h {
@@ -32,10 +41,18 @@ body {
 }
 
 .skills {
+    z-index: 1;
+    position: absolute;
+    right: 50px;
     border-radius: 25px;
     padding: 35px 25px;
-    height: max-content;
     background-color: black;
     margin-left: 50px;
     color: aliceblue;
+    transition: all 400ms ease-in-out;
+}
+
+.skills:hover {
+    z-index: 2;
+    transform: scale(1.5);
 }
